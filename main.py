@@ -8,7 +8,7 @@ chrome_options.add_argument("--disable-extensions")
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-gpu")
 chrome_options.add_argument("--no-sandbox")
-chrome_options.binary_location = r'C:\Program Files\Google\Chrome\Application\chrome.exe'
+chrome_options.binary_location = r'C:\Program Files\Google\Chrome\Application\chrome.exe' # or the path to chrome.exe in your computer, if different
 
 driver = webdriver.Chrome(options=chrome_options)
 
@@ -45,5 +45,5 @@ driver.quit()
 
 # Load data into a DataFrame to process it
 df = pd.DataFrame(dict_list, dtype=object).fillna('')
-df.to_csv(r"C:\Users\kemp5\Documents\Python Projects\web-scrapper-challenge\results.csv", index = False)
+df.to_csv(r"C:\path\to\working\directory\results.csv", index = False)
 
